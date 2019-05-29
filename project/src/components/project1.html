@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <form>
+        <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+       NUM1:<br><input type="number" id="num1" ><BR>
+    <br>
+    NUM2:<br><input type="number" id="num2"><br><br><br><br></div>
+    <div class="col-sm-8">
+    <button id="add" class="btn btn-information">ADD +</button><br><br>
+    <button id="sub" class="btn btn-information">SUBTRACT -</button><br><br>
+    <button id="div" class="btn btn-information">DIVISION /</button><br><br>
+    <button id="mod" class="btn btn-information">MODULUS %</button><br><br>
+    <button id="mul" class="btn btn-information">MULTIPLICATION *</button><br>
+    </div>
+    </div>
+    <button type="reset" class="btn btn-information">RESET</button>
+    <br><BR><BR>
+        <p id="one" style="font-size:20px; "></p>
+    </div>
+
+  
+   
+    </form>
+    <script>
+        var x,y,res;
+        x=document.getElementById("num1").value;
+        y=document.getElementById("num2").value;
+        mybtn1=document.getElementById('add');
+            mybtn1.addEventListener("click",function(){
+              res=x+y;
+             document.getElementById("one").innerHTML=res;  
+            })
+            mybtn2=document.getElementById('sub');
+            mybtn2.addEventListener("click",function(){
+                res=x-y;
+                document.getElementById("one").innerHTML=res;
+            })
+            mybtn3=document.getElementById('div');
+            mybtn3.addEventListener("click",function(){
+                res=x/y;
+                document.getElementById("one").innerHTML=res;
+            })
+            mybtn4=document.getElementById('mod');
+            mybtn4.addEventListener("click",function(){
+                res=x%y;
+                document.getElementById("one").innerHTML=res;
+            })
+            mybtn5=document.getElementById('mul');
+            mybtn5.addEventListener("click",function(){
+                res=x*y;
+                document.getElementById("one").innerHTML=res;
+            })
+            
+    </script>
+</body>
+</html>
